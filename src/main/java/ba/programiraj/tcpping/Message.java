@@ -23,8 +23,7 @@ public class Message {
     public static Message createMessageFromByteArray(byte[] messageAsBytes) {
 
         ByteBuffer byteBuffer = ByteBuffer.wrap(messageAsBytes);
-        long id = byteBuffer.getLong(MESSAGE_ID_POSITION * Long.BYTES);
-        Message message = new Message(id, messageAsBytes.length);
+        Message message = new Message(MESSAGE_ID_POSITION, messageAsBytes.length);
         
         message.timeStampStartPitch = byteBuffer.getLong(START_PITCH_POSITION * Long.BYTES);
         message.timeStampStartCatch = byteBuffer.getLong(START_CATCH_POSITION * Long.BYTES);
