@@ -16,9 +16,9 @@ hostname 		 Computer name where Catcher is running. Used in Pitcher mode.
 
 Example of catcher
 ```
--c -port 5001 -bind 127.0.0.1
+tcping -c -port 5001 -bind 127.0.0.1
 ```
 Example for pitcher
 ```
--p -port 5001 -mps 150 -size 1000  localhost
+tcping -p -port 5001 -mps 150 -size 1000  localhost
 ```
